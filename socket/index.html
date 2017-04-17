@@ -1,1 +1,286 @@
-Welcome to remaxthailand.github.io/socket
+
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width initial-scale=1 maximum-scale=1 user-scalable=no" name="viewport">
+	<title>หน้าจอระบบ</title>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/skin-blue.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Athiti:500,700&amp;amp;subset=thai">
+	<link rel="stylesheet" href="/css/common.css">
+	<!--[if lt IE 8] <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>-->
+</head>
+<body class="skin-blue sidebar-mini th" style="height: auto;">
+	<input value="admin-screen" id="screen" type="hidden"><input value="https://backend-test.remaxthailand.co.th" id="webUrl" type="hidden"><input value="https://socket-test.remaxthailand.co.th" id="apiUrl" type="hidden"><input value="W0001" id="apiId" type="hidden"><input value="ข้อผิดพลาด" id="msgError" type="hidden"><input value="เซิร์ฟเวอร์ไม่ทำงาน" id="msgServerDown" type="hidden">
+	<div class="wrapper" style="height: auto;">
+		<header class="main-header">
+			<a href="javascript:;" class="logo"><span class="logo-mini"><b>RMT</b></span><span class="logo-lg"><b>Remax</b>Thailand</span></a>
+			<nav class="navbar navbar-static-top">
+				<a href="javascript:;" data-toggle="offcanvas" role="button" class="sidebar-toggle"><span toggle="" navigation="" class="sr-only"></span></a>
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="javascript:;" data-toggle="dropdown" role="button" aria-expanded="false" local="th" class="dropdown-toggle" id="local"><i class="fa fa-globe"></i>&nbsp; ภาษา <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="https://backend-test.remaxthailand.co.th/language/en" class="color-white">English</a></li>
+								<li><a href="https://backend-test.remaxthailand.co.th/language/lo" class="color-white">ພາສາລາວ</a></li>
+								<li><a href="https://backend-test.remaxthailand.co.th/language/ja" class="color-white">日本の</a></li>
+								<li><a href="https://backend-test.remaxthailand.co.th/language/zh-CN" class="color-white">中国語</a></li>
+							</ul>
+						</li>
+						<li class="dropdown role-menu" style="">
+							<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">ตำแหน่ง <span class="caret"></span></a>
+							<ul role="menu" class="dropdown-menu" id="roleList">
+								<li class="active"><a href="javascript:;" class="changeRole" role="administrator">ผู้ดูแลระบบ</a></li>
+								<li><a href="javascript:;" class="changeRole" role="owner">เจ้าของธุรกิจ</a></li>
+								<li><a href="javascript:;" class="changeRole" role="shop">Shop</a></li>
+								<li><a href="javascript:;" class="changeRole" role="purchasing">แผนกจัดซื้อ</a></li>
+								<li><a href="javascript:;" class="changeRole" role="officer">พนักงาน</a></li>
+								<li><a href="javascript:;" class="changeRole" role="manager">ผู้จัดการ</a></li>
+								<li><a href="javascript:;" class="changeRole" role="headSale">หัวหน้าเซลล์</a></li>
+								<li><a href="javascript:;" class="changeRole" role="sale">เซลล์</a></li>
+								<li><a href="javascript:;" class="changeRole" role="dealer">ดีลเลอร์</a></li>
+								<li><a href="javascript:;" class="changeRole" role="member">สมาชิกทั่วไป</a></li>
+							</ul>
+						</li>
+						<li class="dropdown user user-menu">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="//src.remaxthailand.co.th/img/web/logo/remax-profile.png" class="user-image"><span ...="" class="member-name">อิทธิพล</span></a>
+							<ul class="dropdown-menu">
+								<li class="user-header">
+									<img src="//src.remaxthailand.co.th/img/web/logo/remax-profile.png" class="img-circle">
+									<p><span ...="" class="member-name">อิทธิพล</span><small>Member since ccc</small></p>
+								</li>
+								<li class="user-footer">
+									<div class="pull-left"><a href="https://backend-test.remaxthailand.co.th/member/profile" class="btn btn-default btn-flat"></a></div>
+									<div class="pull-right"><a href="javascript:;" class="btn btn-default btn-flat signout">ออกจากระบบ</a></div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<aside class="main-sidebar">
+			<section class="sidebar">
+				<div class="user-panel">
+					<div class="pull-left image"><img src="//src.remaxthailand.co.th/img/web/logo/remax-profile.png" alt="User Image" class="img-circle"></div>
+					<div class="pull-left info">
+						<p>คุณ<span ...="" class="member-name">อิทธิพล</span></p>
+						<a href="#"><i class="fa fa-circle text-success"></i><span class="member-memberType"><a href="javascript:;" class="changeRole" role="administrator">ผู้ดูแลระบบ</a></span></a>
+					</div>
+				</div>
+				<form action="#" method="get" class="sidebar-form">
+					<div class="input-group"><input name="q" placeholder="ค้นหา..." class="form-control" type="text"><span class="input-group-btn"><button type="submit" name="search" class="btn btn-flat" id="search-btn"><i class="fa fa-search"></i></button></span></div>
+				</form>
+				<ul class="sidebar-menu" id="menu">
+					<li id="menu-common" class="header">เมนูหลัก</li>
+					<li id="menu-dashboard"><a href="https://backend-test.remaxthailand.co.th/"><i class="fa fa-dashboard"></i><span>ภาพรวมระบบ</span></a></li>
+					<li id="menu-member-profile"><a href="https://backend-test.remaxthailand.co.th/member/profile"><i class="fa fa-user-circle"></i><span>ข้อมูลส่วนตัว</span></a></li>
+					<li id="menu-product"><a href="https://backend-test.remaxthailand.co.th/product"><i class="fa fa-cubes"></i><span>สินค้า</span></a></li>
+					<li id="menu-pos" class="treeview">
+						<a href="https://backend-test.remaxthailand.co.th/pos"><i class="fa fa-circle-o"></i><span>POS</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+						<ul class="treeview-menu">
+							<li id="menu-pos-screen"><a href="https://backend-test.remaxthailand.co.th/pos/screen"><i class="fa fa-circle-o"></i> หน้าจอระบบ</a></li>
+						</ul>
+					</li>
+					<li id="menu-sales" class="treeview">
+						<a href="https://backend-test.remaxthailand.co.th#"><i class="fa fa-cart-arrow-down"></i><span>การขาย</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+						<ul class="treeview-menu">
+							<li id="menu-sales-order-cancel"><a href="https://backend-test.remaxthailand.co.th/sales/order-cancel"><i class="fa fa-circle-o"></i> ยกเลิกคำสั่งซื้อ</a></li>
+						</ul>
+					</li>
+					<li id="menu-common" class="header">จัดการระบบ</li>
+					<li id="menu-system-management" class="treeview active">
+						<a href="https://backend-test.remaxthailand.co.th/system/management"><i class="fa fa-gear"></i><span>จัดการระบบ</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+						<ul class="treeview-menu">
+							<li id="menu-admin-member"><a href="https://backend-test.remaxthailand.co.th/admin/member"><i class="fa fa-circle-o"></i> ผู้ใช้งานในระบบ</a></li>
+							<li id="menu-admin-screen" class="active"><a href="https://backend-test.remaxthailand.co.th/admin/screen"><i class="fa fa-circle-o"></i> หน้าจอระบบ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</aside>
+		<div class="content-wrapper" style="min-height: 575px;">
+			<section class="content-header">
+				<h1>หน้าจอระบบ</h1>
+				<div role="alert" class="alert alert-danger margin-bottom-0 margin-top-10" id="header-alert" style="display: none;">Message</div>
+			</section>
+			<section class="content">
+				<input value="ยกเลิก" id="msgCancel" type="hidden"><input value="ยืนยัน" id="msgConfirm" type="hidden"><input value="สำเร็จ" id="msgSuccess" type="hidden"><input value="ข้อมูลนี้มีอยู่ในระบบแล้ว" id="msgDuplicatedData" type="hidden"><input value="ลบข้อมูล" id="msgDeleteData" type="hidden">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="nav-tabs-custom margin-bottom-0" id="screenManagement">
+							<ul class="nav nav-tabs">
+								<li action="screen" class="active"><a href="#screenMenu" data-toggle="tab">หน้าจอ <i class="fa fa-refresh fa-spin text-aqua screenMenu" style="display: none;"></i></a></li>
+								<li action="mainMenu"><a href="#mainMenu" data-toggle="tab">เมนูหลัก <i class="fa fa-refresh fa-spin text-aqua mainMenu" style="display: none;"></i></a></li>
+								<li action="screenGroup"><a href="#menuGroup" data-toggle="tab">กลุ่มเมนู <i class="fa fa-refresh fa-spin text-aqua menuGroup" style="display: none;"></i></a></li>
+								<li class="li-add pull-right"><a href="javascript:;" data-toggle="tooltip" data-placement="top" title="เพิ่มข้อมูล" class="text-muted"><i data-toggle="modal" data-target="#editData" data-type="add" class="fa fa-plus-circle fa-lg"></i></a></li>
+							</ul>
+							<div class="tab-content">
+								<div page="1" editid="" name="screen" class="tab-pane active" id="screenMenu">
+									<div class="clearfix">
+										<ul class="pagination pagination-sm no-margin margin-bottom-0" style="">
+											<li class="active"><a href="javascript:;">1</a></li>
+											<li><a href="javascript:;">2</a></li>
+											<li><a href="javascript:;">3</a></li>
+										</ul>
+									</div>
+									<ul class="list-group list-group-unbordered margin-bottom-0" page="1">
+										<li id="dashboard" class="list-group-item data-group page1" style=""><i class="fa fa-dashboard"></i> ภาพรวมระบบ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="dashboard" data-icon="dashboard" style="display: none;"></i><a class="pull-right">14</a></li>
+										<li id="shop-detail" class="list-group-item data-group page1" style=""><i class="fa fa-circle-o"></i> รายละเอียดร้านค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="shop-detail" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="member-profile" class="list-group-item data-group page1" style=""><i class="fa fa-user-circle"></i> ข้อมูลส่วนตัว<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="member-profile" data-icon="user-circle" style="display: none;"></i><a class="pull-right">14</a></li>
+										<li id="cart" class="list-group-item data-group page1" style=""><i class="fa fa-shopping-basket"></i> ตะกร้าสินค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="cart" data-icon="shopping-basket" style="display: none;"></i><a class="pull-right">2</a></li>
+										<li id="teamwork" class="list-group-item data-group page1" style=""><i class="fa fa-sitemap"></i> ทีมงาน<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="teamwork" data-icon="sitemap" style="display: none;"></i><a class="pull-right">3</a></li>
+										<li id="commission" class="list-group-item data-group page1" style=""><i class="fa fa-trophy"></i> ค่าคอมมิชชั่น<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="commission" data-icon="trophy" style="display: none;"></i><a class="pull-right">3</a></li>
+										<li id="claim" class="list-group-item data-group page1" style=""><i class="fa fa-cubes"></i> การเคลม<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="claim" data-icon="cubes" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="admin-language" class="list-group-item data-group page1" style=""><i class="fa fa-circle-o"></i> ภาษาของระบบ<i class="btn-delete fa fa-trash-o pull-right margin-left-5 icon-down-4 pointer" style="display: none;"></i><i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="admin-language" data-icon="circle-o" style="display: none;"></i><button class="button btn btn-success btn-xs pull-right margin-left-5 btn-cancel" type="button" style="display: none;">ยกเลิก</button><button class="button btn btn-danger btn-xs pull-right margin-left-5 btn-confirm" type="button" style="display: none;">ยืนยัน</button><a class="pull-right">0</a></li>
+										<li id="receivable-branch" class="list-group-item data-group page1" style=""><i class="fa fa-circle-o"></i> ลูกหนี้ของสาขา<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="receivable-branch" data-icon="circle-o" style="display: none;"></i><a class="pull-right">2</a></li>
+										<li id="member-search" class="list-group-item data-group page1" style=""><i class="fa fa-circle-o"></i> ข้อมูลลูกค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="member-search" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="pos-screen" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> หน้าจอระบบ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="pos-screen" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="product-catalog" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> แคตตาล็อกสินค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="product-catalog" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="product-catalog-detail" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> screen-product-catalog-detail<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="product-catalog-detail" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="product-catalog-info" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> screen-product-catalog-info<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="product-catalog-info" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="product-info" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> ข้อมูลสินค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="product-info" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="product-info-sub" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> screen-product-info-sub<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="product-info-sub" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="report-shop" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> screen-report-shop<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-shop" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="report-dealer-register" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> screen-report-dealer-register<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-dealer-register" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="report-monthly-sale" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> ยอดขายรายเดือน<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-monthly-sale" data-icon="circle-o" style="display: none;"></i><a class="pull-right">4</a></li>
+										<li id="report-shop-register" class="list-group-item data-group page2" style="display: none;"><i class="fa fa-circle-o"></i> screen-report-shop-register<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-shop-register" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="report-dealer" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> screen-report-dealer<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-dealer" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="report-stock" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> สินค้าคงคลัง<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-stock" data-icon="circle-o" style="display: none;"></i><a class="pull-right">4</a></li>
+										<li id="report-product-analysis" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> การวิเคราะห์สินค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-product-analysis" data-icon="circle-o" style="display: none;"></i><a class="pull-right">2</a></li>
+										<li id="report-shop-data" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> screen-report-shop-data<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-shop-data" data-icon="circle-o" style="display: none;"></i><a class="pull-right">3</a></li>
+										<li id="report-claim" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> screen-report-claim<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report-claim" data-icon="circle-o" style="display: none;"></i><a class="pull-right">2</a></li>
+										<li id="sales-order" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> คำสั่งซื้อ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="sales-order" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="sales-order-cancel" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> ยกเลิกคำสั่งซื้อ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="sales-order-cancel" data-icon="circle-o" style="display: none;"></i><a class="pull-right">2</a></li>
+										<li id="sales-order-booking" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> การจอง<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="sales-order-booking" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="admin-member" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> ผู้ใช้งานในระบบ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="admin-member" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="admin-screen" class="list-group-item data-group page3" style="display: none;"><i class="fa fa-circle-o"></i> หน้าจอระบบ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="admin-screen" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+									</ul>
+								</div>
+								<div page="1" editid="" name="screen" class="tab-pane" id="mainMenu">
+									<div class="clearfix"></div>
+									<ul class="list-group list-group-unbordered margin-bottom-0">
+										<li id="account-receivable" class="list-group-item data-group"><i class="fa fa-btc"></i> บัญชีหน้าจอ - ลูกหนี้<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="account-receivable" data-icon="btc" style="display: none;"></i><a class="pull-right">2</a></li>
+										<li id="customer" class="list-group-item data-group"><i class="fa fa-github-alt"></i> ลูกค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="customer" data-icon="github-alt" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="pos" class="list-group-item data-group"><i class="fa fa-circle-o"></i> POS<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="pos" data-icon="circle-o" style="display: none;"></i><a class="pull-right">1</a></li>
+										<li id="product" class="list-group-item data-group"><i class="fa fa-cubes"></i> สินค้า<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="product" data-icon="cubes" style="display: none;"></i><a class="pull-right">5</a></li>
+										<li id="report" class="list-group-item data-group"><i class="fa fa-bar-chart-o"></i> รายงาน<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="report" data-icon="bar-chart-o" style="display: none;"></i><a class="pull-right">19</a></li>
+										<li id="sales" class="list-group-item data-group"><i class="fa fa-cart-arrow-down"></i> การขาย<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="sales" data-icon="cart-arrow-down" style="display: none;"></i><a class="pull-right">4</a></li>
+										<li id="system-management" class="list-group-item data-group"><i class="fa fa-gear"></i> จัดการระบบ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="system-management" data-icon="gear" style="display: none;"></i><a class="pull-right">2</a></li>
+									</ul>
+								</div>
+								<div page="1" editid="" name="screenGroup" class="tab-pane" id="menuGroup">
+									<div class="clearfix"></div>
+									<ul class="list-group list-group-unbordered margin-bottom-0">
+										<li id="0001" data-key="main-navigation" class="list-group-item data-group">เมนูหลัก<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="main-navigation" data-icon="undefined" style="display: none;"></i><a class="pull-right">93</a></li>
+										<li id="0002" data-key="system-management" class="list-group-item data-group">จัดการระบบ<i class="btn-edit fa fa-pencil pull-right margin-left-5 icon-down-4 pointer" data-toggle="modal" data-target="#editData" data-type="edit" data-id="system-management" data-icon="undefined" style="display: none;"></i><a class="pull-right">3</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="nav-tabs-custom margin-bottom-0" id="screenMapping">
+							<ul class="nav nav-tabs">
+								<li action="screen" class="active"><a href="#viewByScreen" data-toggle="tab" aria-expanded="true">หน้าจอ </a></li>
+								<li action="member" class=""><a href="#viewByMember" data-toggle="tab" aria-expanded="false">เมนูหลัก </a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="viewByScreen">
+									<table class="table">
+										<tbody>
+											<tr>
+												<th style="width: 10px">#</th>
+												<th>Task</th>
+												<th>Progress</th>
+												<th style="width: 40px">Label</th>
+											</tr>
+											<tr>
+												<td>.</td>
+												<td>pdate software</td>
+												<td>
+													<div class="progress progress-xs">
+														<div style="width: 55%" class="progress-bar progress-bar-danger"></div>
+													</div>
+												</td>
+												<td><span class="badge bg-red">55%</span></td>
+											</tr>
+											<tr>
+												<td>2.</td>
+												<td>Clean database</td>
+												<td>
+													<div class="progress progress-xs">
+														<div style="width: 70%" class="progress-bar progress-bar-yellow"></div>
+													</div>
+												</td>
+												<td><span class="badge bg-yellow">70%</span></td>
+											</tr>
+											<tr>
+												<td>3.</td>
+												<td>Cron job running</td>
+												<td>
+													<div class="progress progress-xs progress-striped active">
+														<div style="width: 30%" class="progress-bar progress-bar-primary"></div>
+													</div>
+												</td>
+												<td><span class="badge bg-light-blue">30%</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tab-pane" id="viewByMember">
+									<ul class="list-group list-group-unbordered margin-bottom-0"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div tabindex="-1" role="dialog" class="modal fade" id="editData">
+					<div role="document" class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+								<h4 class="modal-title"></h4>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<input placeholder="ID" data-name="id" class="input-id form-control" type="text"><input data-name="link" class="input-url" style="display: none;" type="text">
+										<p class="help-block">URL</p>
+									</div>
+									<div class="input-group">
+										<div class="input-group-addon"><i current-icon="fa-refresh" class="input-icon-preview fa fa-refresh"></i></div>
+										<input placeholder="Icon" data-name="icon" class="input-icon form-control" type="text">
+									</div>
+									<div class="form-group margin-top-10 margin-bottom-0"><label for="">หัวข้อ</label></div>
+									<div class="input-group">
+										<input placeholder="English" data-name="en" class="input-lang-en form-control" type="text">
+										<div class="input-group-addon"><a href="javascript:;"><i data-toggle="tooltip" data-placement="right" title="Translate" data-local="en" class="translate fa fa-arrow-circle-down"></i></a></div>
+									</div>
+									<div class="form-group margin-bottom-0"><input placeholder="ภาษาไทย" data-name="th" class="input-lang-th form-control margin-top-2" type="text"><input placeholder="ພາສາລາວ" data-name="lo" class="input-lang-lo form-control margin-top-2" type="text"><input placeholder="日本の" data-name="ja" class="input-lang-ja form-control margin-top-2" type="text"><input placeholder="中国語" data-name="cn" class="input-lang-zh-CN form-control margin-top-2" type="text"></div>
+								</form>
+							</div>
+							<div class="modal-footer"><button type="button" class="btn-add_data btn btn-primary" style="display: none;">เพิ่มข้อมูล</button><button type="button" class="btn-edit_data btn btn-primary" style="display: none;">แก้ไขข้อมูล</button><button type="button" data-dismiss="modal" class="btn btn-default">ยกเลิก</button></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div tabindex="-1" role="dialog" class="modal fade" id="alertLogin">
+		<div role="document" class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-body"><span>คุณได้เข้าสู่ระบบจากที่อื่น<br>คุณต้องการอนุญาตหรือไม่ ?</span></div>
+				<div class="modal-footer"><button type="button" class="btn btn-primary" id="btn-allow_login">ใช่</button><button type="button" class="btn btn-danger" id="btn-not_allow_login">ไม่ใช่</button></div>
+			</div>
+		</div>
+	</div>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.slim.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script><script src="/js/common.min.js"></script><script src="/js/admin-screen.min.js"></script>
+</body>
+

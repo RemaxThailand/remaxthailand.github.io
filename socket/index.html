@@ -1,50 +1,68 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width initial-scale=1 maximum-scale=1 user-scalable=no" name="viewport">
-	<title>Remax (Thailand) API</title>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/skin-blue.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css">
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Athiti:500,700&amp;amp;subset=thai">
-	<link rel="stylesheet" href="/css/common.css">
-	<!--[if lt IE 8] <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 user-scalable=no" name="viewport">
+    <title>login</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/flat/blue.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Athiti:500,700&amp;amp;subset=thai">
+    <!--[if lt IE 8] <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>-->
 </head>
-<body class="skin-blue sidebar-mini th" style="height: auto;">
-	<input value="admin-screen" id="screen" type="hidden"><input value="https://backend-test.remaxthailand.co.th" id="webUrl" type="hidden"><input value="https://socket-test.remaxthailand.co.th" id="apiUrl" type="hidden"><input value="W0001" id="apiId" type="hidden"><input value="ข้อผิดพลาด" id="msgError" type="hidden"><input value="เซิร์ฟเวอร์ไม่ทำงาน" id="msgServerDown" type="hidden">
-	<div class="wrapper" style="height: auto;">
-		<header class="main-header">
-			<a href="javascript:;" class="logo"><span class="logo-mini"><b>RMT</b></span><span class="logo-lg"><b>Remax</b>Thailand</span></a>
-			<nav class="navbar navbar-static-top">
-				<a href="javascript:;" data-toggle="offcanvas" role="button" class="sidebar-toggle"><span toggle="" navigation="" class="sr-only"></span></a>
-				<div class="navbar-custom-menu">
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="javascript:;" data-toggle="dropdown" role="button" aria-expanded="false" local="th" class="dropdown-toggle" id="local"><i class="fa fa-globe"></i>&nbsp; ระบบ <span class="caret"></span></a>
-							<ul role="menu" class="dropdown-menu">
-								<li><a href="javascript:;" class="color-white">Socket</a></li>
-								<li><a href="javascript:;" class="color-white">API</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-		<aside class="main-sidebar">
-			<section class="sidebar">
-				<ul class="sidebar-menu" id="menu">
-					<li id="menu-common" class="header">เมนูหลัก</li>
-					<li id="menu-dashboard"><a href="javascript:;"><i class="fa fa-dashboard"></i><span>ภาพรวมระบบ</span></a></li>
-					<li id="menu-member-profile"><a href="http://remaxthailand.github.io/socket/parameter"><i class="fa fa-user-circle"></i><span>ข้อมูลในระบบ</span></a></li>
-				</ul>
-			</section>
-		</aside>
-	</div>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.slim.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script><script src="/js/common.min.js"></script><script src="/js/admin-screen.min.js"></script>
+
+<body class="hold-transition login-page">
+    <div class="content">
+        <div class="login-box">
+            <div class="login-logo"><b>Remax</b>Thailand</div>
+            <div class="login-box-body">
+                <p class="login-box-msg">ลงชื่อเข้าใช้เพื่อเริ่มต้นเซสชันของคุณ</p>
+                <form action="../../index2.html" method="post">
+                    <div class="form-group has-feedback">
+                        <input type="text" placeholder="ชื่อผู้ใช้" class="form-control" id="username"><span class="glyphicon glyphicon-user form-control-feedback"></span></div>
+                    <div class="form-group has-feedback">
+                        <input type="password" placeholder="รหัสผ่าน" class="form-control" id="password"><span class="glyphicon glyphicon-lock form-control-feedback"></span></div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="checkbox icheck">
+                                <label>
+                                    <input type="checkbox" id="remember"> จดจำฉัน</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div local="th" class="btn-group pull-right" id="local"><span data-toggle="dropdown" class="btn dropdown-toggle"><i class="fa fa-globe"></i> ภาษา<span class="caret"></span></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/language/en">English</a></li>
+                                    <li><a href="/language/lo">ພາສາລາວ</a></li>
+                                    <li><a href="/language/ja">日本の</a></li>
+                                    <li><a href="/language/zh-CN">中国語</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="social-auth-links text-center">
+                    <button type="submit" data-loading-text="กำลังโหลดข้อมูล" class="btn btn-block btn-primary btn-flat" id="btn-signin">ลงชื่อเข้าใช้</button>
+                </div><a href="./">ฉันลืมรหัสผ่าน</a>
+                <br><a href="./" class="text-center"><b>ลงทะเบียนสมาชิกใหม่</b></a>
+                <div class="text-center text-red hidden" id="msg-error">
+                    <br>
+                    <div role="alert" style="margin-bottom:0" class="alert alert-warning"><i class="fa fa-warning"></i><span id="errorMessage" ลงทะเบียนสมาชิกใหม่></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.slim.min.js"></script>
+    <script src="/js/login.min.js"></script>
 </body>
+
 </html>
